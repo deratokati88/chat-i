@@ -16,6 +16,17 @@
   justify-content: space-between;
   align-items: center;
 }
+.header-name{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icon_image {
+  width: 40px;
+  height: 40px;
+  border-radius: 100px;
+  object-fit: cover;
+}
 
 .header-name a{
   font-size: 16px;
