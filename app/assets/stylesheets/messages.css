@@ -96,6 +96,8 @@
 .message-user {
   color: #434a54;
   font-size: 16px;
+  display: flex;
+  align-items: top;
 }
 
 .message-date {
