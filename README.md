@@ -7,7 +7,7 @@
 | name     | string | null: false |
 | email    | string | null: false |
 | password | string | null: false |
-
+| image    | string | null: false |
 ## rooms テーブル
 
 | Column   | Type    | Options     |
