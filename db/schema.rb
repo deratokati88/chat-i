@@ -15,14 +15,12 @@ ActiveRecord::Schema.define(version: 2020_12_23_053736) do
   create_table "chara_messages", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "content", null: false
     t.integer "feeling_id", null: false
-    t.bigint "room_id"
     t.bigint "chara_id"
     t.bigint "message_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["chara_id"], name: "index_chara_messages_on_chara_id"
     t.index ["message_id"], name: "index_chara_messages_on_message_id"
-    t.index ["room_id"], name: "index_chara_messages_on_room_id"
   end
 
   create_table "charas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -68,7 +66,6 @@ ActiveRecord::Schema.define(version: 2020_12_23_053736) do
 
   add_foreign_key "chara_messages", "charas"
   add_foreign_key "chara_messages", "messages"
-  add_foreign_key "chara_messages", "rooms"
   add_foreign_key "messages", "rooms"
   add_foreign_key "messages", "users"
 end

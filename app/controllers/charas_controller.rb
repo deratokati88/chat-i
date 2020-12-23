@@ -13,6 +13,7 @@ class CharasController < ApplicationController
   end
 
   private
+  
   def chara_params
     params.require(:chara).permit(:name,:image)
   end

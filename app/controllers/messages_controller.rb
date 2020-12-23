@@ -26,5 +26,4 @@ class MessagesController < ApplicationController
     @messages = @room.messages.includes(:user)
   end
 
-
 end
