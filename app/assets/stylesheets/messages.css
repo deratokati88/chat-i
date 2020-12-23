@@ -70,6 +70,7 @@
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
+  background-color: darkgray;
 }
 
 .header-title {
@@ -98,17 +99,21 @@
 
 .message {
   margin: 10px 0 0 0;
+  border: solid 1px gray;
+  border-radius: 20px;
+  background-color: white;
 }
 
 .upper-message{
   display: flex;
+  align-items: center;
 }
 
 .message-user {
   color: #434a54;
   font-size: 16px;
   display: flex;
-  align-items: top;
+  align-items: center;
 }
 
 .message-date {
