@@ -23,8 +23,7 @@ class MessagesController < ApplicationController
 
   def idetify_room_message
     @room = Room.find(params[:room_id])
-    @messages = @room.messages.includes(:user)
+    @messages = @room.messages.includes(:user,:chara_message)
   end
-
 
 end
