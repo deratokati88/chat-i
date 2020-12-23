@@ -1,0 +1,2 @@
+class CharaMessage < ApplicationRecord
+end
