@@ -4,6 +4,7 @@ class CreateCharaMessages < ActiveRecord::Migration[6.0]
       t.string  :content, null: false
       t.integer :feeling_id, null: false
       t.references :chara, foreign_key: true
+      t.references :room, foreign_key: true
       t.references :message, foreign_key: true
       t.timestamps
     end

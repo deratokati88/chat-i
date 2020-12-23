@@ -15,6 +15,11 @@
       <!-- 投稿したメッセージ内容を記述する -->
       <%= feeling[message.feeling_id - 1] %>
       <%= message.content %>
+    <div class="message-user">
+      <!-- 投稿したユーザー名情報を出力する -->
+      <%# <%= message.chara_message.id %> 
+    </div>
+
     </div>
   </div>
 </div>

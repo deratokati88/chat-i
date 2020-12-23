@@ -19,6 +19,7 @@ class Message < ApplicationRecord
     @chara_message.feeling_id = @message.feeling_id
     @chara_message.message_id = @message.id
     @chara_message.chara_id = @room.chara_id
+    @chara_message.room_id = @room.id
     @chara_message.save
   end
 
