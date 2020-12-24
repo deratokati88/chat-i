@@ -34,13 +34,18 @@
   text-decoration: none;
 }
 
+.create-zone{
+  height: 100%;
+}
+
 .create-room {
   font-size: 10px;
+  margin-top: 20px;
 }
 
 .create-room a {
   border: 1px solid lightblue;
-  padding: 14px;
+  padding: 10px;
   color: deepskyblue;
   text-decoration: none;
 }
@@ -70,7 +75,6 @@
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
-  background-color: darkgray;
 }
 
 .header-title {

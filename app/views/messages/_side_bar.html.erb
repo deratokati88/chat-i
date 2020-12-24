@@ -3,8 +3,13 @@
     <img src=<%= current_user.image %> class = "icon_image">
     <%= link_to current_user.name, edit_user_path(current_user) %>
   </div>
-  <div class="create-room">
-    <%= link_to "チャットを作成する", new_room_path %>
+  <div class="create-zone">
+    <div class="create-room">
+      <%= link_to "チャットを作成する", new_room_path %>
+    </div>
+    <div class="create-room">
+      <%= link_to "キャラを作成する　", new_chara_path %>
+    </div>
   </div>
 </div>
 
