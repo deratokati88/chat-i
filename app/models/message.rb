@@ -14,7 +14,7 @@ class Message < ApplicationRecord
   def chara_messages_build
     @message = Message.last
     @room = Room.find(@message.room_id)
-    @content = JmessageContent.find(1)
+    @content = MessageContent.find(1)
     @chara_message = CharaMessage.new
     @chara_message.content = @content.content
     @chara_message.feeling_id = @message.feeling_id
