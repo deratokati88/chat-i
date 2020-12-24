@@ -18,7 +18,7 @@ class Message < ApplicationRecord
     @content = ""
     content_create
     @chara_message = CharaMessage.new
-    @chara_message.content = @content.content
+    @chara_message.content = @content
     @chara_message.feeling_id = @message.feeling_id
     @chara_message.message_id = @message.id
     @chara_message.chara_id = @room.chara_id
@@ -28,7 +28,12 @@ class Message < ApplicationRecord
 
   def content_create
     target_id = MessageContent.where(chara_id: @room.chara_id, feeling_id: @message.feeling_id).where(MessageContent.arel_table[:favo].lteq(@room.favo)).pluck(:id).sample(1)
-    @content = MessageContent.find(target_id[0])
+    if target_id == []
+      @content = 'へー'
+    else
+      @content = MessageContent.find(target_id[0])
+      @content = @content.content
+    end
   end
 
 end
