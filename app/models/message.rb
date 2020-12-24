@@ -27,7 +27,7 @@ class Message < ApplicationRecord
   end
 
   def content_create
-    target_id = MessageContent.where(chara_id: @room.chara_id).where(feeling_id: @message.feeling_id).pluck(:id).sample(1)
+    target_id = MessageContent.where(chara_id: @room.chara_id, feeling_id: @message.feeling_id).where(MessageContent.arel_table[:favo].lteq(@room.favo)).pluck(:id).sample(1)
     @content = MessageContent.find(target_id[0])
   end
 
