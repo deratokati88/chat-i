@@ -6,7 +6,7 @@ class Message < ApplicationRecord
 
   validates :content,:feeling_id, presence: true
 
-  after_commit do
+  after_create_commit do
     chara_messages_build
   end
 
