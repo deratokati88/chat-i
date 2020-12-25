@@ -28,8 +28,10 @@ ActiveRecord::Schema.define(version: 2020_12_23_104055) do
   create_table "charas", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "image", null: false
+    t.bigint "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_charas_on_user_id"
   end
 
   create_table "message_contents", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -79,6 +81,7 @@ ActiveRecord::Schema.define(version: 2020_12_23_104055) do
   add_foreign_key "chara_messages", "charas"
   add_foreign_key "chara_messages", "messages"
   add_foreign_key "chara_messages", "rooms"
+  add_foreign_key "charas", "users"
   add_foreign_key "message_contents", "charas"
   add_foreign_key "messages", "rooms"
   add_foreign_key "messages", "users"
