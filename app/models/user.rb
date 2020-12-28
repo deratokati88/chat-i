@@ -7,4 +7,5 @@ class User < ApplicationRecord
   validates :name,:image, presence: true
   has_many :rooms
   has_many :messages
+  has_many :charas
 end

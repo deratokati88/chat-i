@@ -15,6 +15,6 @@ class CharasController < ApplicationController
   private
   
   def chara_params
-    params.require(:chara).permit(:name,:image)
+    params.require(:chara).permit(:name,:image).merge(user_id: current_user.id)
   end
 end

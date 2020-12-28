@@ -112,3 +112,16 @@
   padding: 0;
   font-size: 13px;
 }
+
+
+.chara_image{
+  width: 200px;
+  height: auto;
+}
+.contents_row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10vw;
+}
