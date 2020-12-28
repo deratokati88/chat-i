@@ -12,6 +12,7 @@ class UsersController < ApplicationController
 
   def show
     user_find
+    move_to_index
     @charas = @user.charas
   end
 
@@ -22,5 +23,11 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :image)
+  end
+
+  def move_to_index
+    unless @user.id == current_user.id
+      redirect_to root_path
+    end
   end
 end
