@@ -3,7 +3,7 @@
   <% @charas.each do |chara| %>
     <div class="content_post" >
       <div>
-     <%= link_to image_tag(chara.image.url, class: "chara_image"), root_path %>
+     <%= link_to image_tag(chara.image.url, class: "chara_image"), new_chara_message_content_path(chara.id) %>
       </div>
       <span class="name"><%= chara.name %></span>
     </div>
