@@ -12,7 +12,7 @@
          </div>
         <div class="message_content_form_rigth">
           <%= link_to "編集する", edit_chara_message_content_path(@chara.id, message_content.id) %>
-          <%= link_to "削除する", root_path %>
+          <%= link_to "削除する", chara_message_content_path(@chara.id, message_content.id), method: :delete %>
         </div>
      </div>
       <div>
