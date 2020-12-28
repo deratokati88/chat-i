@@ -1,0 +1,26 @@
+<div class="chara_top">
+<h1><%= @chara.name %>詳細</h1>
+<img src=<%= @chara.image %> class = "chara_image">
+<h1><%= link_to "新規コメント作成", new_chara_message_content_path(@chara.id) %></h1>
+</div>
+<div class="message_content_row">
+  <% @message_contents.each do |message_content| %>
+    <div class="message_content_post" >
+      <div class="message_content_form">
+         <div class="message_content_form_left">
+          <span class="message_content"><%="内容：#{message_content.content}" %></span>
+         </div>
+        <div class="message_content_form_rigth">
+          <%= link_to "編集する", edit_chara_message_content_path(@chara.id, message_content.id) %>
+          <%= link_to "削除する", root_path %>
+        </div>
+     </div>
+      <div>
+        <span class="message_content"><%= "好感度：#{message_content.favo}" %></span>
+      </div>
+      <div>
+         <%= @feeling[message_content.feeling_id - 1] %>
+      </div>
+    </div>
+  <% end %>
+</div>
