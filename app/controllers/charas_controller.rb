@@ -12,6 +12,12 @@ class CharasController < ApplicationController
     end
   end
 
+  def show
+    @feeling = ['喜','怒','哀','楽']
+    @chara = Chara.find(params[:id])
+    @message_contents = @chara.message_contents
+  end
+
   private
   
   def chara_params

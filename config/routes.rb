@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :rooms, only: [:index, :new, :create, :destroy] do
     resources :messages, only: [:index, :create]
   end
-  resources :charas, only: [:new, :create] do
-    resources :message_contents, only: [:new, :create]
+  resources :charas, only: [:new, :create, :show] do
+    resources :message_contents, only: [:new, :create, :edit, :update, :destroy]
   end
 end

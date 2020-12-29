@@ -1,0 +1,15 @@
+.message_content_row{
+  padding: 5px;
+  height: 70vh;
+  overflow: scroll;
+}
+
+.message_content_post{
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+.message_content_form{
+  display: flex;
+  justify-content: space-between;
+}
