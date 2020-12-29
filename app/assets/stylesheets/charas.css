@@ -17,8 +17,8 @@
 header {
   height: 100px;
   width: 100%;
-  padding: 15px 0;
-  background-color: #337079;
+  margin: 0;
+  background-color:#F1B9BA;
   color: white;
 }
 header .headline{

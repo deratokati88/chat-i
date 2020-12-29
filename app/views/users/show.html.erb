@@ -10,15 +10,16 @@
       <li class="nav-list-item"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
     </ul>
   </header>
-
-<h1><%= @user.name %>さんの投稿一覧</h1>
 <div class="contents_row">
-  <% @charas.each do |chara| %>
-    <div class="content_post" >
-      <div>
-     <%= link_to image_tag(chara.image.url, class: "chara_image"), chara_path(chara.id) %>
+  <h1><%= @user.name %>さんの投稿一覧</h1>
+  <div class="contents_index">
+    <% @charas.each do |chara| %>
+      <div class="content_post" >
+        <div>
+          <%= link_to image_tag(chara.image.url, class: "chara_image"), chara_path(chara.id) %>
+        </div>
+        <h4 class="chara_name"><%= chara.name %></h4>
       </div>
-      <span class="name"><%= chara.name %></span>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
