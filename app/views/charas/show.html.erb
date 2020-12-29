@@ -1,5 +1,18 @@
+  <header>
+  	<h1 class="headline">
+      <a>Chatーi</a>
+    </h1>
+    <ul class="nav-list">
+      <li class="nav-list-item">
+        <a><%= link_to 'Top', root_path %></a>
+      </li>
+      <li class="nav-list-item"><%= link_to 'マイページ', user_path(current_user) %></li>
+      <li class="nav-list-item"><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></li>
+    </ul>
+  </header>
+<div class="chara_body">
 <div class="chara_top">
-<h1><%= @chara.name %>詳細</h1>
+<h1><%= @chara.name %></h1>
 <img src=<%= @chara.image %> class = "chara_image">
 <h1><%= link_to "新規コメント作成", new_chara_message_content_path(@chara.id) %></h1>
 </div>
@@ -8,7 +21,7 @@
     <div class="message_content_post" >
       <div class="message_content_form">
          <div class="message_content_form_left">
-          <span class="message_content"><%="内容：#{message_content.content}" %></span>
+          <p class="message_content"><%="内容：#{message_content.content}" %></p>
          </div>
         <div class="message_content_form_rigth">
           <%= link_to "編集する", edit_chara_message_content_path(@chara.id, message_content.id) %>
@@ -16,11 +29,12 @@
         </div>
      </div>
       <div>
-        <span class="message_content"><%= "好感度：#{message_content.favo}" %></span>
+        <p class="message_content"><%= "好感度：#{message_content.favo}" %></p>
       </div>
       <div>
          <%= @feeling[message_content.feeling_id - 1] %>
       </div>
     </div>
   <% end %>
+</div>
 </div>

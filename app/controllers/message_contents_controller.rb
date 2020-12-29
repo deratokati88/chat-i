@@ -21,7 +21,7 @@ class MessageContentsController < ApplicationController
 
   def update
     if @message_content.update(message_content_params)
-      redirect_to chara_path
+      redirect_to chara_path(@chara.id)
     else
       render :edit
     end

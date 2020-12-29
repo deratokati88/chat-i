@@ -115,13 +115,39 @@
 
 
 .chara_image{
-  width: 200px;
-  height: auto;
+  display: inline-block;
+  height: 200px;
+  width: auto;
 }
 .contents_row{
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
-  padding: 10vw;
+  justify-content: right;
+  height: calc(100vh - 100px);
+  width: 100vw;
+  background-color: #E76F53;
+}
+
+.contents_row h1{
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.contents_index{
+  overflow: scroll;
+}
+
+.content_post{
+  float: left;
+  width: 24.5%;
+  text-align: center;
+  border: 1px solid #eeeae2;
+  margin: 0 0 20px 2%;
+  background: #fff;
+}
+
+.chara_name{
+  background-color: #5C3B95;
+  color: #fff;
 }
