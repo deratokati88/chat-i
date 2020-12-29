@@ -4,7 +4,7 @@ class Message < ApplicationRecord
   has_one :chara_message
   has_one :message_content
 
-  validates :content,:feeling_id, presence: true
+  validates :content, :feeling_id, presence: true
 
   after_create_commit do
     chara_messages_build
@@ -15,7 +15,7 @@ class Message < ApplicationRecord
   def chara_messages_build
     @message = Message.last
     @room = Room.find(@message.room_id)
-    @content = ""
+    @content = ''
     content_create
     @chara_message = CharaMessage.new
     @chara_message.content = @content
@@ -27,7 +27,8 @@ class Message < ApplicationRecord
   end
 
   def content_create
-    target_id = MessageContent.where(chara_id: @room.chara_id, feeling_id: @message.feeling_id).where(MessageContent.arel_table[:favo].lteq(@room.favo)).pluck(:id).sample(1)
+    target_id = MessageContent.where(chara_id: @room.chara_id,
+                                     feeling_id: @message.feeling_id).where(MessageContent.arel_table[:favo].lteq(@room.favo)).pluck(:id).sample(1)
     if target_id == []
       @content = 'へー'
     else
@@ -35,5 +36,4 @@ class Message < ApplicationRecord
       @content = @content.content
     end
   end
-
 end

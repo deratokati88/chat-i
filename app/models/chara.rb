@@ -1,7 +1,7 @@
 class Chara < ApplicationRecord
   mount_uploader :image, ImageUploader
-  
-  validates :name,:image, presence: true
+
+  validates :name, :image, presence: true
   belongs_to :user
   has_many :rooms
   has_many :chara_messages

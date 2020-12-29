@@ -1,8 +1,7 @@
 class RoomsController < ApplicationController
-
   def index
   end
-  
+
   def new
     @room = Room.new
   end
@@ -23,8 +22,8 @@ class RoomsController < ApplicationController
   end
 
   private
+
   def room_params
     params.require(:room).permit(:name, :chara_id).merge(user_id: current_user.id, favo: 0)
   end
 end
-

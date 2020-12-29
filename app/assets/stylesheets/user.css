@@ -135,6 +135,7 @@
 }
 
 .contents_index{
+  width: 100%;
   overflow: scroll;
 }
 
