@@ -1,17 +1,42 @@
+.chara_top{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chara_top a{
+  text-decoration: none;
+  color: #fff;
+}
+
+.chara_body{
+  background-color: #E76F53;
+  color: #fff;
+}
+
 .message_content_row{
-  padding: 5px;
-  height: 70vh;
+  height: calc(100vh - 372px);
+  width: 100vw;
   overflow: scroll;
+  color: #5C3B95;
 }
 
 .message_content_post{
   width: 100%;
-  padding-bottom: 10px;
+  background-color: #fff;
+  margin-bottom: 10px;
+  border-radius: 10px;
 }
 
 .message_content_form{
   display: flex;
   justify-content: space-between;
+}
+
+.message_content_form_rigth a{
+  text-decoration: none;
+  color: #5C3B95;
 }
 
 header {
