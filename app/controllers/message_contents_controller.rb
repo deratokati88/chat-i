@@ -1,6 +1,6 @@
 class MessageContentsController < ApplicationController
   before_action :idetify_chara, only: [:new, :create, :edit, :update, :destroy]
-  before_action :move_to_index, only: [:new, :create]
+  before_action :move_to_index, only: [:new, :create, :edit, :update, :destroy]
   before_action :idetify_message_content, only: [:edit, :update, :destroy]
   
   def new
