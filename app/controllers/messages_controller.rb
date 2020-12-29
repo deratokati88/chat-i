@@ -6,7 +6,7 @@ class MessagesController < ApplicationController
 
   def create
     @room = Room.find(params[:room_id])
-    last2_message = ""
+    last2_message = ''
     set_last_message
     @message = @room.messages.new(message_params)
     if @message.save
@@ -18,15 +18,15 @@ class MessagesController < ApplicationController
     end
   end
 
-
   private
+
   def message_params
     params.require(:message).permit(:content, :feeling_id).merge(user_id: current_user.id)
   end
 
   def idetify_room_message
     @room = Room.find(params[:room_id])
-    @messages = @room.messages.includes(:user,:chara_message)
+    @messages = @room.messages.includes(:user, :chara_message)
   end
 
   def set_last_message
@@ -51,5 +51,4 @@ class MessagesController < ApplicationController
       end
     end
   end
-
 end
