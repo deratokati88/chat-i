@@ -24,7 +24,7 @@ https://chat-i32475.herokuapp.com/
 
 |実装したい機能|要件|
 |:---|:---|
-|align-left|align-center|
+|ユーザー管理機能|align-center|
 |セルの左揃えです|セルの中央揃えです|
 
 
