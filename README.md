@@ -23,6 +23,9 @@ https://chat-i32475.herokuapp.com/
 # 洗い出した機能
 
 |左揃え|中央揃え|右揃え|
+|:---|:---:|--:|
+|align-left|align-center|align-right|
+|セルの左揃えです|セルの中央揃えです|セルの右揃えです|
 
 
 
