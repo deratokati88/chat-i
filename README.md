@@ -22,7 +22,7 @@ https://chat-i32475.herokuapp.com/
 
 # 洗い出した機能
 
-|左揃え|中央揃え|
+|実装したい機能|要件|
 |:---|:---|
 |align-left|align-center|
 |セルの左揃えです|セルの中央揃えです|
