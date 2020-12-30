@@ -150,5 +150,5 @@ https://chat-i32475.herokuapp.com/
 1. bundle install
 2. rails db:create
 3. rails db:migrate
-4. rake db:seed  <br> - railsのバージョン  Rails 6.0.3.4  -rubyのバージョン  ruby 2.6.5
+4. rake db:seed  <br>- railsのバージョン<br>Rails 6.0.3.4<br>- rubyのバージョン<br>ruby 2.6.5
 
