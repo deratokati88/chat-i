@@ -42,6 +42,11 @@ https://chat-i32475.herokuapp.com/
 ||・キャラの返信用メッセージは作成した後も編集削除ができる|
 
 
+#　実装した機能について
+- 画像と名前を入力しキャラを作成することができる。
+![circleanimationmuvie](https://gyazo.com/6045307abbe9352166f7da3540a1df37)
+
+
 
 
 
