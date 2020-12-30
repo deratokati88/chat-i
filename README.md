@@ -147,7 +147,7 @@ https://chat-i32475.herokuapp.com/
 - has_one :chara_message
 
 #　ローカルでの動作方法
-1bundle install
-2rails db:create
-3rails db:migrate
-4rake db:seed
+1.bundle install
+2.rails db:create
+3.rails db:migrate
+4.rake db:seed
